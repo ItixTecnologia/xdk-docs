@@ -2,9 +2,9 @@
 module.exports = {
     title: 'XDK Docs',
     tagline: 'Faça muito mais em muito menos tempo',
-    url: 'https://itixtecnologia.github.io',
-    baseUrl: '/xdk-docs/',
-    onBrokenLinks: 'throw',
+    url: 'https://itixtecnologia.github.io/xdk-docs',
+    baseUrl: '/',
+    onBrokenLinks: 'ignore',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
     organizationName: 'ItixTecnologia',
@@ -61,7 +61,7 @@ module.exports = {
                         },
                         {
                             label: 'E-mail',
-                            href: 'contato@itixti.com.br',
+                            href: 'mailto:contato@itixti.com.br',
                         }
                     ],
                 },
