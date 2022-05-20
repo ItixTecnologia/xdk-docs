@@ -2,13 +2,13 @@
 module.exports = {
     title: 'XDK Docs',
     tagline: 'Faça muito mais em muito menos tempo',
-    url: 'https://your-docusaurus-test-site.com',
-    baseUrl: '/',
+    url: 'https://itixtecnologia.github.io',
+    baseUrl: '/xdk-docs',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
-    organizationName: 'itix',
-    projectName: 'xdk',
+    organizationName: 'ItixTecnologia',
+    projectName: 'xdk-docs',
     i18n: {
         defaultLocale: 'pt-BR',
         locales: ['pt-BR'],
