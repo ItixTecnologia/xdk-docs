@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>XDK Docs Blog</title>
+        <link>https://itixtecnologia.github.io/xdk-docs/blog</link>
+        <description>XDK Docs Blog</description>
+        <lastBuildDate>Thu, 15 Apr 2021 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>pt-BR</language>
+        <item>
+            <title><![CDATA[Bem-vindos!]]></title>
+            <link>https://itixtecnologia.github.io/xdk-docs/blog/welcome</link>
+            <guid>welcome</guid>
+            <pubDate>Thu, 15 Apr 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Bem-vindos!]]></description>
+            <content:encoded><![CDATA[<p>Bem-vindos!</p>]]></content:encoded>
+            <category>xdk</category>
+            <category>.net</category>
+            <category>itix</category>
+        </item>
+    </channel>
+</rss>
