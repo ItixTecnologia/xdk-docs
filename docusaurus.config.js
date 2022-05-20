@@ -3,7 +3,7 @@ module.exports = {
     title: 'XDK Docs',
     tagline: 'Faça muito mais em muito menos tempo',
     url: 'https://itixtecnologia.github.io',
-    baseUrl: '/xdk-docs',
+    baseUrl: '/xdk-docs/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
