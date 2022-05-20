@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkxdk_docs=self.webpackChunkxdk_docs||[]).push([[305],{6875:function(s){s.exports=JSON.parse('{"label":".net","permalink":"/xdk-docs/blog/tags/net","allTagsPath":"/xdk-docs/blog/tags","count":1}')}}]);

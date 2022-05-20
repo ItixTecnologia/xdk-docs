@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkxdk_docs=self.webpackChunkxdk_docs||[]).push([[452],{8916:function(e){e.exports=JSON.parse('[{"label":"xdk","permalink":"/xdk-docs/blog/tags/xdk","count":1},{"label":".net","permalink":"/xdk-docs/blog/tags/net","count":1},{"label":"itix","permalink":"/xdk-docs/blog/tags/itix","count":1}]')}}]);

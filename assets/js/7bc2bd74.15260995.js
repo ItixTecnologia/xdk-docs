@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkxdk_docs=self.webpackChunkxdk_docs||[]).push([[833],{4398:function(s){s.exports=JSON.parse('{"label":"itix","permalink":"/blog/tags/itix","allTagsPath":"/blog/tags","count":1}')}}]);
