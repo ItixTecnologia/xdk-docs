@@ -5,11 +5,11 @@ slug: /app/structure/stores
 
 Um store é um meio de comunicação do projeto com APIs.
 
-:::warning
+:::warning Importante
 Todas as requisições HTTP **_<ins>DEVEM</ins>_** ser feitas usando `stores`.
 :::
 
-:::info
+:::tip DICA
 Se você acredita que tem um motivo válido para não usar um `store` na sua requisição, favor comunicar a equipe da XDK para avaliação.
 :::
 

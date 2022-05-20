@@ -20,6 +20,14 @@ module.exports = {
                 'app/structure/routes',
                 'app/structure/layouts',
             ]
+        },
+        {
+            type: 'category',
+            label: 'Personalização',
+            items: [
+                'app/customization/theme',
+                'app/customization/layout'
+            ]
         }
     ],
     "docs/server": [
