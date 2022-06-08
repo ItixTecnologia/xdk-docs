@@ -36,11 +36,11 @@ Um exemplo de uma estrutura completa se encontra na imagem abaixo:
 
 Abra o arquivo `app.module.ts` e configure a XDK:
 
-``` ts
+```ts title="/src/app/app.module.ts" showLineNumbers
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IxCoreConfig, IxCoreModule, GuardsModule } from '@itix/core';
-import { AuthModule } from '@itix/components';
+import { AuthModule, IxComponentsModule, IxComponentsConfig } from '@itix/components';
 
 import { AppRoutingModule, routes } from './app-routing.module';
 import { ViewsModule } from './views/views.module';
@@ -62,6 +62,7 @@ const xdkConfig: IxCoreConfig = {
         useIxOAuth: true // Indica se deve usar OAuth da ITIX para realizar a autenticação das requisições.
     }
 };
+const xdkCompConfig: IxComponentsConfig = {};
 
 @NgModule({
     imports: [
@@ -70,6 +71,7 @@ const xdkConfig: IxCoreConfig = {
         AppRoutingModule,
         AuthModule,
         IxCoreModule.forRoot(xdkConfig),
+        IxComponentsModule.forRoot(xdkCompConfig),
         GuardsModule,
         ComponentsModule,
         ViewsModule

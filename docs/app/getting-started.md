@@ -35,3 +35,60 @@ Uma série de perguntas será exibida. Em cada etapa você informa os dados dese
 3. Na próxima pergunta devemos informar o nome da aplicação sem usar acentos e/ou espaços. Deve-se usar apenas letras minúsculas, números e
    hifens. Para nosso exemplo iremos usar `gerenciamento-pacientes` e apertar `Enter`.
 4. Feito isso, o gerador irá criar o projeto e fazer as configurações necessárias. Nosso projeto está pronto para uso!
+
+## BIBLIOTECA @ITIX/COMPONENTS
+
+Se for utilizar a biblioteca de componentes, é necessário adicionar a configuração dela no arquivo `app.module.ts`. A XDK não assume que
+você deseja usá-la. Para isso, basta alterar o arquivo `app.module.ts` para incluir as linhas destacadas:
+
+```ts title="/src/app/app.module.ts" showLineNumbers
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IxCoreConfig, IxCoreModule } from '@itix/core';
+// highlight-start
+import { IxComponentsConfig, IxComponentsModule } from '@itix/components';
+// highlight-end
+
+import { AppRoutingModule, routes } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { ViewsModule } from './views/views.module';
+import { ComponentsModule } from './components/components.module';
+import { environment } from '../environments/environment';
+
+const xdkConfig: IxCoreConfig = {
+    baseUrl: environment.baseUrl,
+    applicationName: 'gerenciamento-pacientes',
+    routes: routes,
+    security: {
+        shouldUseAuthorizer: false,
+        useIxOAuth: false,
+        loginSyncRoute: 'login'
+    }
+};
+// highlight-start
+const xdkCompConfig: IxComponentsConfig = {};
+// highlight-end
+
+@NgModule({
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        AppRoutingModule,
+        IxCoreModule.forRoot(xdkConfig),
+        // highlight-start
+        IxComponentsModule.forRoot(xdkCompConfig),
+        // highlight-end
+        ComponentsModule,
+        ViewsModule
+    ],
+    declarations: [
+        AppComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+})
+export class AppModule {}
+```

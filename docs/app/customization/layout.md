@@ -154,8 +154,8 @@ const xdkConfig: IxCoreConfig = {
     menu: {
         applicationsUrl: '',
         // highlight-start
-        mainLogo: '',
-        smallLogo: '',
+        mainLogo: 'imagemBase64',
+        smallLogo: 'imagemBase64',
         // highlight-end
         // ...
     }

@@ -28,6 +28,13 @@ module.exports = {
                 'app/customization/theme',
                 'app/customization/layout'
             ]
+        },
+        {
+            type: 'category',
+            label: 'Tutoriais',
+            items: [
+                'app/tutorials/page-with-table'
+            ]
         }
     ],
     "docs/server": [
