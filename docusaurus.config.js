@@ -9,6 +9,7 @@ module.exports = {
     favicon: 'img/favicon.ico',
     organizationName: 'ItixTecnologia',
     projectName: 'xdk-docs',
+    plugins: ['docusaurus-plugin-sass'],
     i18n: {
         defaultLocale: 'pt-BR',
         locales: ['pt-BR'],
@@ -22,7 +23,7 @@ module.exports = {
             title: 'XDK Docs',
             logo: {
                 alt: 'XDK Docs',
-                src: 'img/itixlogo.jpg',
+                src: 'img/itixlogo.png',
             },
             items: [
                 {
@@ -80,7 +81,7 @@ module.exports = {
                     showReadingTime: true,
                 },
                 theme: {
-                    customCss: require.resolve('./src/css/custom.css'),
+                    customCss: require.resolve('./src/style/custom.scss'),
                 },
             },
         ],

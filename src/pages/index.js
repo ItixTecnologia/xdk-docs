@@ -10,7 +10,7 @@ import styles from './styles.module.css';
 const features = [
     {
         title: 'Fácil de usar',
-        imageUrl: 'img/undraw_docusaurus_mountain.svg',
+        imageUrl: 'img/home/easy.svg',
         description: (
             <>
                 A XDK foi desenvolvida desde sua base para ser fácil e intuitiva de usar.
@@ -20,7 +20,7 @@ const features = [
     },
     {
         title: 'Concentre-se no que importa',
-        imageUrl: 'img/undraw_docusaurus_tree.svg',
+        imageUrl: 'img/home/focus.svg',
         description: (
             <>
                 A XDK permite que você se concentre no que importa, sua lógica de negócio.
@@ -30,7 +30,7 @@ const features = [
     },
     {
         title: 'Esteja sempre atualizado',
-        imageUrl: 'img/undraw_docusaurus_react.svg',
+        imageUrl: 'img/home/updated.svg',
         description: (
             <>
                 Usando sempre as melhores e mais recentes tecnologias, seu projeto nunca
