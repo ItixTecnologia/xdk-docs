@@ -6,8 +6,6 @@
  */
 
 /* You can override the default Infima variables here. */
-$primary: var(--ifm-color-primary);
-
 :root {
     --ifm-color-primary: #2850d1;
     --ifm-color-primary-dark: #2448bc;
@@ -16,6 +14,11 @@ $primary: var(--ifm-color-primary);
     --ifm-color-primary-light: #395fd9;
     --ifm-color-primary-lighter: #4367db;
     --ifm-color-primary-lightest: #4c6edd;
+
+    --ifm-code-border-radius: 0px;
+
+    --color-background-primary: #2850d1;
+    --color-background-secondary: #1336a7;
 }
 
 header {
@@ -24,7 +27,7 @@ header {
 
 .navbar {
     height: 80px;
-    background-color: var(--ifm-color-primary);
+    background-color: var(--color-background-primary);
 
     .navbar__items {
         padding-left: 10px;
@@ -34,7 +37,7 @@ header {
             padding: 5px;
 
             &:hover {
-                background-color: var(--ifm-color-primary-darkest);
+                background-color: var(--color-background-secondary);
             }
         }
         .navbar__title,
@@ -56,7 +59,7 @@ header {
     padding-top: 30px !important;
     padding-left: 20px !important;
     padding-right: 15px !important;
-    background-color: var(--ifm-color-primary-darkest) !important;
+    background-color: var(--color-background-secondary) !important;
 
     .menu__link {
         padding: 0.75em;
@@ -66,16 +69,9 @@ header {
         font-size: 16px;
 
         &.menu__link--active {
-            background-color: var(--ifm-color-primary) !important;
+            background-color: var(--color-background-primary) !important;
         }
     }
-
-    // .theme-doc-sidebar-menu {
-    //     &.menu__list {
-    //         border: none;
-
-    //     }
-    // }
 
     .menu__list-item {
         .menu__list {
@@ -104,7 +100,7 @@ header {
 }
 
 .hero {
-    background-color: var(--ifm-color-primary);
+    background-color: var(--color-background-secondary);
     color: white !important;
     .container {
         .button {
@@ -112,7 +108,7 @@ header {
 
             &:hover {
                 background-color: white !important;
-                color: var(--ifm-color-primary) !important;
+                color: var(--color-background-secondary) !important;
             }
         }
     }
@@ -124,10 +120,11 @@ header {
 
 .table-of-contents {
     li {
+        margin: 0.3rem !important;
         .table-of-contents__link {
             font-weight: 600;
-            font-size: 0.9rem;
-            padding: 12px;
+            font-size: 0.8rem;
+            padding: 4px 10px;
             border-radius: 6px;
             transition: all 0.28s ease-in-out;
 
@@ -153,39 +150,72 @@ code {
     border-style: none;
 }
 
-.language-ts,
-.language-html,
-.language-shell,
-.language-css,
-.language-scss,
 .alert {
     border-radius: 0px !important;
 }
 
-.breadcrumbs__link {
-    border-radius: 6px !important;
+.breadcrumbs__item {
+    &.breadcrumbs__item--active {
+        .breadcrumbs__link {
+            font-weight: 500;
+        }
+    }
+
+    .breadcrumbs__link {
+        border-radius: 6px !important;
+    }
 }
 
 h1 {
     font-size: 2.5rem !important;
 }
 
+.-red {
+    color: firebrick;
+}
+
+.-yellow {
+    color: darkgoldenrod;
+}
+
+.-blue {
+    color: darkcyan;
+}
+
 [data-theme="dark"] {
-    // --ifm-color-primary: #7690e5;
-    // --ifm-color-primary-dark: #708be4;
-    // --ifm-color-primary-darker: #6784e2;
-    // --ifm-color-primary-darkest: #5f7de1;
-    // --ifm-color-primary-light: #93a8eb;
-    // --ifm-color-primary-lighter: #a2b3ed;
-    // --ifm-color-primary-lightest: #cdd7f6;
+    --ifm-color-primary: #96afff;
+    --ifm-color-primary-dark: #708be4;
+    --ifm-color-primary-darker: #6784e2;
+    --ifm-color-primary-darkest: #5f7de1;
+    --ifm-color-primary-light: #93a8eb;
+    --ifm-color-primary-lighter: #a2b3ed;
+    --ifm-color-primary-lightest: #cdd7f6;
+
+    --ifm-background-color: #20232e !important;
+    --prism-background-color: #2b2e39 !important;
+    --ifm-breadcrumb-color-active: #b9caff !important;
+
+    --color-contrast: #b9caff;
 
     code {
         background-color: #282a36;
-        color: #bd93f9;
+        color: #cba6ff;
         font-size: 0.9rem !important;
         font-weight: normal !important;
         border-radius: 0px;
         border-width: 0px;
         border-style: none;
+    }
+
+    .-red {
+        color: #ff8c8c;
+    }
+
+    .-yellow {
+        color: #dfa30d;
+    }
+
+    .-blue {
+        color: #00b1b1;
     }
 }
