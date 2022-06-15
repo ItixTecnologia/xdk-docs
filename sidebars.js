@@ -33,7 +33,8 @@ module.exports = {
             type: 'category',
             label: 'Tutoriais',
             items: [
-                'app/tutorials/page-with-table'
+                'app/tutorials/page-with-table',
+                'app/tutorials/page-with-form'
             ]
         }
     ],

@@ -1,5 +1,5 @@
 ---
-title: Criar um página com tabela
+title: Criar uma página com tabela
 slug: /app/tutorials/page-with-table
 ---
 
@@ -20,7 +20,9 @@ Esse comando deve ser executado na raiz do projeto.
 Uma série de perguntas será exibida. Em cada etapa você informa os dados desejados. Segue um exemplo de utilização:
 
 1. Na primeira pergunta devemos informar o tipo do gerador a ser executado. Para nosso exemplo selecione a opção Tabela e aperte `Enter`.
-    1. ![Gerador 1](/img/tutorials/page-with-table/table1.png)
+
+![Gerador 1](/img/tutorials/page-with-table/table1.png)
+
 2. Nas próximas perguntas iremos responder:
     1. Se desejamos criar um `store` (deixaremos em não porque o nosso já está criado)
     2. Qual o nome do `store` (usaremos o store `gerenciamento-pacientes` em nosso caso)
@@ -28,10 +30,13 @@ Uma série de perguntas será exibida. Em cada etapa você informa os dados dese
     4. Qual o tipo de dados da tabela (usaremos o *model* já criado: `PacienteModel`)
     5. Por último, informar qual pasta contém a nossa página, como estamos criando essa página diretamente em `src/app/views`, podemos
        deixar em branco e apertar `Enter`.
-    6. ![Gerador 2](/img/tutorials/page-with-table/table2.png)
+
+![Gerador 2](/img/tutorials/page-with-table/table2.png)
+
 3. Feito isso, o gerador irá criar a página, o configurador da tabela e fazer as configurações necessárias. Teremos a seguinte estrutura de
    arquivos como resultado:
-    1. ![Gerador 3](/img/tutorials/page-with-table/table3.png)
+
+![Gerador 3](/img/tutorials/page-with-table/table3.png)
 
 ## CONFIGURANDO A TABELA
 
@@ -79,6 +84,7 @@ export class GerenciamentoPacientesTableConfig extends BaseTableConfig<PacienteM
         ];
     }
 }
+
 ```
 
 Inicialmente vamos alterar o título da tabela e remover os comentários.
@@ -112,8 +118,8 @@ o que for necessário.
 | Propriedade          | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | name                 | Nome do campo no objeto.                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| type                 | Tipo de dados da coluna (ver os tipos em [`ColumnTypeEnum`](https://xdkresources.z13.web.core.windows.net/#/app/components?path=data-list-controls%2Fcolumn%2Fmodels%2Fenums&v=2.0.7&item=ColumnTypeEnum)). <br/>**Valor padrão: ColumnTypeEnum.Text.**                                                                                                                                                                                      |
-| dateTimeFormat       | Permite formatar a data/hora quando o campo for do tipo `ColumnTypeEnum.DateTime`.<br/>Aceita qualquer opção em [`DateTimeFormatEnum`](https://xdkresources.z13.web.core.windows.net/#/app/core?path=models%2Fenums&v=1.1.16&item=DateTimeFormatEnum) além de aceitar uma string com o padrão da data/hora personalizado. <br/>**Valor padrão: DateTimeFormatEnum.ShortDate.**                                                               |
+| type                 | Tipo de dados da coluna (ver os tipos em [`ColumnTypeEnum`](https://xdkresources.z13.web.core.windows.net/#/app/components?path=data-list-controls%2Fcolumn%2Fmodels%2Fenums&v=2.0.7&item=ColumnTypeEnum)). <br/>**Valor padrão: ColumnTypeEnum. Text.**                                                                                                                                                                                      |
+| dateTimeFormat       | Permite formatar a data/hora quando o campo for do tipo `ColumnTypeEnum.DateTime`.<br/>Aceita qualquer opção em [`DateTimeFormatEnum`](https://xdkresources.z13.web.core.windows.net/#/app/core?path=models%2Fenums&v=1.1.16&item=DateTimeFormatEnum) além de aceitar uma string com o padrão da data/hora personalizado. <br/>**Valor padrão: DateTimeFormatEnum. ShortDate.**                                                               |
 | imageWidth           | Quando o campo for do tipo `ColumnTypeEnum.DateTime`, esse campo definirá a largura da imagem.                                                                                                                                                                                                                                                                                                                                               |
 | imageHeight          | Quando o campo for do tipo `ColumnTypeEnum.DateTime`, esse campo definirá a altura da imagem.                                                                                                                                                                                                                                                                                                                                                |
 | trueText             | Permite definir o valor que será exibido se o campo for do tipo `ColumnTypeEnum.Boolean` e seu valor for verdadeiro. <br/>**Valor padrão: Sim.**                                                                                                                                                                                                                                                                                             |
@@ -191,6 +197,7 @@ new TableColumnModel({
     type: ColumnTypeEnum.CustomTemplate
     // highlight-end
 })
+
 ```
 
 Depois, criamos o HTML personalizado (e se necessário, também o código TypeScript):
@@ -208,7 +215,7 @@ Depois, criamos o HTML personalizado (e se necessário, também o código TypeSc
 ```
 
 :::info
-O `ng-template` da coluna personalizada aceita qualquer HTML, CSS e chamadas às funções TypeScript. Você pode montá-lo como desejar. 
+O `ng-template` da coluna personalizada aceita qualquer HTML, CSS e chamadas às funções TypeScript. Você pode montá-lo como desejar.
 Funciona como um componente HTML normal.
 :::
 
@@ -224,11 +231,12 @@ Como estamos usando colunas personalizadas, precisamos adicionar o módulo `Colu
     imports: [
         CommonModule,
         LayoutsModule,
-       // highlight-start
+        // highlight-start
         ColumnModule
-       // highlight-end
+        // highlight-end
     ]
 // ...
+
 ```
 
 ### FINALIZANDO A PÁGINA
@@ -315,6 +323,7 @@ export class GerenciamentoPacientesComponent extends BasePageComponent implement
         }
     }
 }
+
 ```
 
 ### ADICIONANDO ROTA
