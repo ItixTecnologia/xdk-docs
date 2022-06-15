@@ -6,11 +6,6 @@
  */
 
 /* You can override the default Infima variables here. */
-@function ix-color-primary-dark($color) {
-    $mixed-color: mix($color, #2850d1, 91.5%);
-    @return $mixed-color;
-}
-
 :root {
     --ifm-color-primary: #2850d1;
     --ifm-color-primary-dark: #2448bc;
